@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shareable and Downloadable Resume</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Shareable Resume Builder</h1>
+    </header>
+    <main>
+        <section id="resume-builder">
+            <h2>Build Your Resume</h2>
+            <form id="resume-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+
+                <label for="education">Education:</label>
+                <textarea id="education" name="education" placeholder="Enter your education details"></textarea>
+
+                <label for="work-experience">Work Experience:</label>
+                <textarea id="work-experience" name="workExperience" placeholder="Enter your work experience"></textarea>
+
+                <button type="button" id="generate-resume">Generate Resume</button>
+            </form>
+        </section>
+
+        <section id="resume-display" class="hidden">
+            <h2>Your Resume</h2>
+            <div id="resume-content">
+                <p><strong>Name:</strong> <span id="display-name" contenteditable="true"></span></p>
+                <p><strong>Education:</strong> <span id="display-education" contenteditable="true"></span></p>
+                <p><strong>Work Experience:</strong> <span id="display-work-experience" contenteditable="true"></span></p>
+            </div>
+
+            <div id="resume-link-section">
+                <h3>Shareable Link</h3>
+                <p>Shareable Link: <a id="shareable-link" href="#" target="_blank">Not generated yet</a></p>
+                <button id="copy-link">Copy Link</button>
+            </div>
+
+            <div id="resume-download-section">
+                <h3>Download as PDF</h3>
+                <button id="download-pdf">Download PDF</button>
+            </div>
+        </section>
+    </main>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
